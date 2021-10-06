@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        .parent{
+            padding: 20px;
+            border: 1px solid;
+            position: relative;
+        }
+        .parent p:before{
+            position: absolute;
+            content: '-before';
+            left: 120px;
+        }
+        .parent p::after {
+            position: absolute;
+            content: '-after';
+            right: 120px;
+        }
+        .ghum{
+            position: absolute;
+            animation: chintu infinite 5s linear;
+            transition: all;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .ghum::before{
+            position: absolute;
+            content: '1';
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+        @keyframes chintu {
+            0% {
+                transform: rotate(0deg) scale(1);
+                background-color: blue;
+                left: 0;
+                top: calc(100% - 80px);;
+            }
+            25%{
+                transform: rotate(360deg) scale(2);
+                background-color: chartreuse;
+                left: calc(50% - 80px);
+                top:25px;
+            }
+            50%{
+                transform: rotate(360deg) scale(1);
+                background-color: chartreuse;
+                left: calc(100% - 80px);
+                top: calc(100% - 80px);
+            }
+            75%{
+                transform: rotate(360deg) scale(2);
+                background-color: chartreuse;
+                left: calc(100% - 80px);
+                top: calc(100% - 80px);
+            }
+            100%{
+                transform: rotate(0deg) scale(1);
+                background-color: blue;
+                left: 0;
+                top: calc(100% - 80px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="parent">
+        <p>launde 1</p>
+        <p>launde 2</p>
+        <p>launde 3</p>
+        <p>launde 4</p>
+        <p>launde 5</p>
+        <div class="ghum"></div>
+    </div>
+    
+</body>
+</html>

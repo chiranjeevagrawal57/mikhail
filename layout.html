@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout HTML</title>
+    <style>
+        body {
+            background-color: burlywood;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        body > div{
+            flex: 1;
+        }
+        .banner{
+            background-color: orangered; 
+            min-height: 200px;           
+        }
+        header, footer {
+            padding: 10px 15px;
+            background-color: white;
+        }
+        footer{
+            text-align: center;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span>Logo</span>
+        <span>Login</span>
+    </header>
+    <div>
+        <div class="banner">
+            Banner
+        </div>
+    </div>
+    <footer>
+        Made with &#10084; by Chiranjeev Agrawal
+    </footer>
+</body>
+</html>
